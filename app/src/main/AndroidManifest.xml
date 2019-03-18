@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.broadcast">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ServiceMain"></activity>
+        <activity android:name=".BroadcastTestActivity" />
+        <activity android:name=".ThreeButton" /> <!-- <activity android:name=".MyBroadReceiver" /> -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".MyBroadReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="MY_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyBroadcast2Receiver">
+            <intent-filter android:priority="2">
+                <action android:name="MY_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyBroadcast3Receiver">
+            <intent-filter android:priority="3">
+                <action android:name="MY_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyBroadcast4Receiver">
+            <intent-filter android:priority="4">
+                <action android:name="MY_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".MyBroadcast5Receiver">
+            <intent-filter android:priority="5">
+                <action android:name="MY_BROADCAST_RECEIVER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".MyService"
+            android:exported="true"
+
+            >
+
+        </service>
+    </application>
+
+</manifest>
